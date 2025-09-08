@@ -77,7 +77,7 @@ When working with ${mode} content:
 ${mode === 'mdx' ? '- Use MDX components (like <Callout>, <Counter>, <ProgressBar>) when appropriate' : ''}
 
 Always respond in a helpful, professional, and concise manner.
-Additionally, for all proposed ${mode} content which should be wrapped in the standard "\`\`\`${mode} \`\`\`" code block of the ${mode} mode.
+Additionally, for all proposed ${mode} content which should be wrapped in the standard "\`\`\`${mode} \`\`\`" code block of the ${mode} mode at the end of the answer. After it there will be no more content.
 `;
 
     const fullMessages = [

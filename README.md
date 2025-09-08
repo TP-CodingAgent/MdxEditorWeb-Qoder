@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MDX Editor
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It provides a powerful editing environment for both Markdown and MDX content with AI assistance capabilities.
+
+## Features
+
+- **Dual Editing Modes**: Work with pure Markdown or enhanced MDX content with React components
+- **Live Preview**: See your content rendered in real-time as you type
+- **AI Assistance**: Get intelligent suggestions and content improvements with cutting-edge AI
+- **Rich Editing Tools**: Comprehensive toolbar with formatting options and component insertion
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Dark/Light Theme**: Switch between color schemes based on your preference
+- **Multiple AI Providers**: Support for OpenAI, Google Gemini, and OpenRouter models
 
 ## Getting Started
 
@@ -13,6 +25,46 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js app router pages and API routes
+│   ├── api/             # API routes
+│   │   └── ai/          # AI chat API
+│   │       └── chat/    # Chat endpoint
+│   └── editor/          # Editor page
+├── components/          # React components
+│   ├── ai/              # AI-related components
+│   ├── editor/          # Editor components
+│   └── mdx-components/  # Custom MDX components
+├── lib/                 # Business logic and utilities
+│   └── ai/              # AI service and context
+├── utils/               # Utility functions
+└── context/             # React context providers
+```
+
+### API Structure
+
+- `POST /api/ai/chat` - Send messages to AI providers
+- `GET /api/ai/chat` - Health check endpoint
+
+### Web Page Structure
+
+1. **Home Page** (`/`) - Entry point with editor mode selection
+2. **Editor Page** (`/editor`) - Main editing interface with multiple modes:
+   - Split View: Code editor with live preview
+   - Rich Text: WYSIWYG editing experience
+   - View Only: Content preview without editing
+
+## Documentation
+
+For more detailed information about the project, please refer to the following documentation files:
+
+- [Requirements.md](Requirements.md) - Project requirements, operations, and acceptance criteria
+- [Technical.md](Technical.md) - Technical architecture, components, and implementation details
+- [History-chat.md](History-chat.md) - Summary of development process and chat history
 
 ## Bundle Analysis
 

@@ -332,7 +332,8 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({
 
   const extractMarkdownCodeBlocks = useCallback((text: string): string => {
     // Regular expression to match markdown/MDX code blocks
-    const codeBlockRegex = /```(?:mdx|markdown|md)\n([\s\S]*?)```/gi;
+    // const codeBlockRegex = /```(?:mdx|markdown|md)\n([\s\S]*?)```/gi;
+    const codeBlockRegex = /```(?:mdx|markdown|md)\n([\s\S]*?)(```([\s]{0,1})$)/gi;
     const matches = [];
     let match;
     
