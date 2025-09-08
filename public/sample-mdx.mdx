@@ -1,0 +1,214 @@
+# Welcome to MDX Editor! 🚀
+
+This is a powerful **MDX** editor that combines the simplicity of Markdown with the power of **React components**.
+
+
+## ✨ What Makes MDX Special?
+
+MDX combines the **best of both worlds**: the simplicity of Markdown with the power and flexibility of React components.
+
+<Callout type="info">
+**MDX = Markdown + JSX:** You can write Markdown and embed React components seamlessly!
+</Callout>
+
+### 🎯 Key Features
+
+- 🚀 **All Markdown features** - Everything you love about Markdown
+- ⚛️ **React components** - Embed interactive components directly  
+- 🎨 **Custom styling** - Create reusable styled components
+- 🔧 **Dynamic content** - Build interactive documentation
+- 📱 **Responsive design** - Works beautifully on all devices
+- 🌙 **Theme support** - Seamless dark/light mode switching
+
+## 🧩 Interactive Components
+
+### Try this Interactive Counter:
+
+<Counter />
+
+This counter is a **React component** embedded directly in the MDX content! You can click the buttons and see the state update in real-time.
+
+### Custom Callout Components:
+
+<Callout type="success">
+✅ **Success:** This is a success message using a custom React component!
+</Callout>
+
+<Callout type="warning">
+⚠️ **Warning:** This demonstrates how you can create reusable UI components in MDX.
+</Callout>
+
+<Callout type="info">
+💡 **Info:** MDX components can accept props, maintain state, and do everything React components can do!
+</Callout>
+
+## 📚 MDX Syntax Guide
+
+### Standard Markdown
+
+All regular Markdown syntax works perfectly:
+
+- **Bold text**
+- *Italic text*
+- ~~Strikethrough~~
+- `inline code`
+- [Links](https://mdxjs.com/)
+
+#### Unordered List
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+- Third item
+
+#### Ordered List
+1. First step
+2. Second step
+   1. Sub-step A
+   2. Sub-step B
+3. Final step
+
+#### Code Blocks with Syntax Highlighting
+
+```jsx
+import React from 'react';
+
+// MDX allows you to define components inline
+export const Highlight = ({ color, children }) => (
+  <span style={{ 
+    backgroundColor: color, 
+    padding: '2px 6px', 
+    borderRadius: '4px' 
+  }}>
+    {children}
+  </span>
+);
+
+// Then use them in your content
+function App() {
+  return (
+    <div>
+      <h1>Hello <Highlight color="#ffeb3b">MDX</Highlight>!</h1>
+    </div>
+  );
+}
+```
+
+### Component Usage
+
+```mdx
+{/* You can use components with JSX syntax */}
+<Callout type="info">
+This is how you use custom components in MDX!
+</Callout>
+
+{/* Or with regular component syntax */}
+<Counter />
+
+{/* You can even use inline JavaScript expressions */}
+The current date is: {new Date().toLocaleDateString()}
+```
+
+### Advanced Examples
+
+export const ProgressBar = ({ progress, label }) => (
+  <div style={{ margin: '20px 0' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+      <span>{label}</span>
+      <span>{progress}%</span>
+    </div>
+    <div style={{ 
+      width: '100%', 
+      height: '20px', 
+      backgroundColor: '#e0e0e0', 
+      borderRadius: '10px',
+      overflow: 'hidden'
+    }}>
+      <div style={{
+        width: `${progress}%`,
+        height: '100%',
+        backgroundColor: '#4caf50',
+        borderRadius: '10px',
+        transition: 'width 0.3s ease'
+      }} />
+    </div>
+  </div>
+);
+
+#### Progress Indicators:
+
+<ProgressBar progress={75} label="Project Completion" />
+<ProgressBar progress={90} label="Learning MDX" />
+<ProgressBar progress={60} label="Component Mastery" />
+
+### Tables with Enhanced Styling
+
+| Feature | Markdown | MDX | Benefits |
+|---------|----------|-----|----------|
+| Static Content | ✅ | ✅ | Fast, simple |
+| Interactive Elements | ❌ | ✅ | Engaging UX |
+| Reusable Components | ❌ | ✅ | DRY principle |
+| Dynamic Data | ❌ | ✅ | Real-time updates |
+
+## 🎨 Styling and Themes
+
+MDX components can adapt to your theme automatically:
+
+export const ThemeBox = () => (
+  <div style={{
+    padding: '20px',
+    borderRadius: '8px',
+    margin: '16px 0',
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    color: 'white',
+    textAlign: 'center'
+  }}>
+    <h4>🎨 Styled Component</h4>
+    <p>This component uses gradient styling and adapts to your content!</p>
+  </div>
+);
+
+<ThemeBox />
+
+## 🛠️ Getting Started with MDX
+
+1. **Write Markdown** as you normally would
+2. **Add components** using JSX syntax: `<ComponentName />`
+3. **Define components** at the top of your file or import them
+4. **Use props** to make components flexible and reusable
+5. **Combine with state** for interactive experiences
+
+<Callout type="success">
+🎉 **You're ready to create amazing interactive documentation with MDX!**
+
+Try editing this content, adding your own components, or creating new interactive elements. The possibilities are endless!
+</Callout>
+
+### Next Steps
+
+- Experiment with the interactive counter above
+- Try modifying the component props
+- Create your own custom components
+- Build interactive tutorials or documentation
+
+---
+
+**Happy coding with MDX!** ⚛️📝
+
+*The future of documentation is interactive - and you're now part of it!*
+
+{/* This is a comment in MDX - it won't be rendered */}
+export const Footer = () => (
+  <div style={{
+    marginTop: '40px',
+    padding: '20px',
+    textAlign: 'center',
+    borderTop: '2px solid #eee',
+    color: '#666',
+    fontStyle: 'italic'
+  }}>
+    Made with ❤️ using MDX - Where Markdown meets React!
+  </div>
+);
+
+<Footer />
